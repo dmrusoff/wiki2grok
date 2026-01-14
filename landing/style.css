@@ -546,6 +546,78 @@ code strong {
     font-size: 14px;
 }
 
+/* Install Guide */
+.install-guide {
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    border-radius: var(--radius-md);
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.install-guide h3 {
+    font-size: 20px;
+    margin-bottom: 24px !important;
+    text-align: center;
+    color: #fff;
+    opacity: 1 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.step-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.step-badge {
+    background: var(--accent-cyan);
+    color: var(--bg-dark);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.step p {
+    font-size: 14px !important;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    text-align: left !important;
+}
+
+.step code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: monospace;
+}
+
+@media (max-width: 600px) {
+    .step-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
