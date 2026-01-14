@@ -57,6 +57,29 @@ h3,
     background-clip: text;
 }
 
+.strikethrough {
+    position: relative;
+    display: inline-block;
+    color: var(--text-muted);
+}
+
+.strikethrough::after {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 50%;
+    width: 110%;
+    height: 14px;
+    background: #fff;
+    transform: translateY(-50%) rotate(-1.5deg);
+    opacity: 0.9;
+    pointer-events: none;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='20' viewBox='0 0 200 20'%3E%3Cpath d='M0,10 C20,8 40,12 60,10 C80,8 100,12 120,10 C140,8 160,12 180,10 C200,8 220,12 240,10' stroke='black' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    mask-size: cover;
+    /* Adding a rougher edge with a clip-path instead of just a rectangle */
+    clip-path: polygon(0% 20%, 5% 15%, 15% 25%, 25% 12%, 35% 28%, 45% 10%, 55% 24%, 65% 15%, 75% 22%, 85% 12%, 95% 26%, 100% 18%, 100% 80%, 95% 75%, 85% 85%, 75% 72%, 65% 82%, 55% 70%, 45% 88%, 35% 75%, 25% 85%, 15% 72%, 5% 82%, 0% 75%);
+}
+
 /* Navbar */
 .navbar {
     position: fixed;
