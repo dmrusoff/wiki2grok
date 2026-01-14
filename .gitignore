@@ -1,0 +1,15 @@
+# OS X
+.DS_Store
+
+# Extension build artifacts (none currently, but good practice)
+*.log
+
+# Python / PIL artifacts
+__pycache__/
+*.pyc
+
+# System generated screenshots
+*.png
+!icons/*.png
+!landing/assets/*.png
+!landing/assets/hero.png
