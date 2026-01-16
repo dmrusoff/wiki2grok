@@ -1,6 +1,14 @@
-# Wiki2Grok Browser Extension
+# Wiki2Grok
 
-A Chrome browser extension that automatically redirects Wikipedia links to their corresponding Grokipedia articles.
+**Experience Grokipedia effortlessly.** Wiki2Grok is a browser extension that automatically redirects Wikipedia links to Grokipedia—giving you instant access to unbiased, AI-powered articles with real-time knowledge and balanced perspectives.
+
+🌐 **[Visit the Landing Page](https://wiki2grok.vercel.app)**
+
+## Why Grokipedia?
+
+- ⚖️ **Unbiased Perspectives**: Grokipedia presents multiple viewpoints on controversial topics, giving you balanced, well-rounded information free from editorial slant.
+- 🧠 **AI-Powered Insights**: Powered by Grok, articles are intelligently synthesized and clearly written—making complex topics easy to understand.
+- 🔄 **Real-Time Knowledge**: Unlike static encyclopedias, Grokipedia stays current with the latest information and breaking developments.
 
 ## Features
 
@@ -8,23 +16,23 @@ A Chrome browser extension that automatically redirects Wikipedia links to their
 - ⚡ **Instant Toggle**: Enable/disable redirects with one click
 - 📊 **Redirect Counter**: Tracks how many times you've been redirected
 - 🎨 **Modern UI**: Beautiful dark theme popup with smooth animations
-- 🛡️ **Smart Filtering**: Only redirects actual article pages, not special Wikipedia pages (Talk:, Category:, etc.)
+- 🛡️ **Smart Filtering**: Only redirects actual article pages, not special Wikipedia pages
 
 ## Installation
 
-### Chrome/Edge/Brave (Manual Installation)
+### Chrome / Edge / Brave
 
-1. Open your browser and navigate to `chrome://extensions/`
-2. Enable **Developer mode** (toggle in the top right corner)
-3. Click **Load unpacked**
-4. Select the `Wiki2Grok` folder
-5. The extension is now installed!
+1. Download the extension ZIP from the [landing page](https://wiki2grok.vercel.app)
+2. Extract the ZIP file
+3. Open your browser and navigate to `chrome://extensions/`
+4. Enable **Developer mode** (toggle in the top right corner)
+5. Click **Load unpacked**
+6. Select the extracted folder
+7. The extension is now installed!
 
-### Firefox (Manual Installation)
+### Firefox (Coming Soon)
 
-1. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`
-2. Click **Load Temporary Add-on**
-3. Select the `manifest.json` file from the `Wiki2Grok` folder
+Firefox support is currently in development.
 
 ## Usage
 
@@ -46,7 +54,7 @@ Grokipedia: https://grokipedia.com/page/Article_Name
 
 - Wikipedia's `/wiki/` path is replaced with Grokipedia's `/page/`
 - Article names and URL encoding are preserved exactly
-- Works with all Wikipedia language subdomains (en, de, fr, etc.)
+- Works with all Wikipedia language editions (en, de, fr, etc.)
 
 ### Filtered Pages
 
@@ -67,11 +75,16 @@ Wiki2Grok/
 │   ├── popup.html      # Popup UI structure
 │   ├── popup.css       # Popup styling
 │   └── popup.js        # Popup logic
+├── landing/            # Landing page (deployed to Vercel)
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── assets/
 ├── icons/
-│   ├── icon16.png      # Toolbar icon (16x16)
-│   ├── icon48.png      # Extension icon (48x48)
-│   └── icon128.png     # Store icon (128x128)
-└── README.md           # This file
+│   ├── icon16.png
+│   ├── icon48.png
+│   └── icon128.png
+└── README.md
 ```
 
 ## Development
@@ -87,10 +100,10 @@ No build step required! The extension is written in vanilla JavaScript and can b
 3. Verify you're redirected to Grokipedia
 4. Check the popup to see the redirect count increment
 
+## Support
+
+If you find Wiki2Grok useful, consider [leaving a tip](https://tiptopjar.com/wiki2grok) to support development!
+
 ## License
 
 MIT License - Feel free to use, modify, and distribute.
-
-## Support
-
-For issues or feature requests, please open an issue on GitHub.
