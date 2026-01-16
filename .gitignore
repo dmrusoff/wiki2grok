@@ -13,3 +13,4 @@ __pycache__/
 !icons/*.png
 !landing/assets/*.png
 !landing/assets/hero.png
+wiki2grok-extension.zip
