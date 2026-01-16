@@ -10,87 +10,68 @@
 
 <body>
   <div class="container">
-    <!-- Header -->
+    <!-- Header with Logo -->
     <header class="header">
-      <div class="logo">
-        <div class="logo-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="14" stroke="url(#gradient)" stroke-width="2.5" />
-            <path d="M10 12L14 20L16 16L18 20L22 12" stroke="url(#gradient)" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <defs>
-              <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
-                <stop offset="0%" stop-color="#7c3aed" />
-                <stop offset="100%" stop-color="#06b6d4" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="logo-text">
-          <h1>Wiki2Grok</h1>
-          <span class="version">v1.0.0</span>
-        </div>
+      <div class="logo-icon">
+        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer circle with gradient -->
+          <circle cx="50" cy="50" r="45" stroke="url(#logoGradient)" stroke-width="4" fill="none" />
+          <!-- W shape inside -->
+          <path d="M28 35 L38 65 L50 45 L62 65 L72 35" stroke="url(#logoGradient)" stroke-width="5"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <defs>
+            <linearGradient id="logoGradient" x1="0" y1="0" x2="100" y2="100">
+              <stop offset="0%" stop-color="#a855f7" />
+              <stop offset="50%" stop-color="#7c3aed" />
+              <stop offset="100%" stop-color="#06b6d4" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
+      <h1 class="app-title">Wiki2Grok</h1>
+      <span class="version">v1.0.0</span>
     </header>
 
     <!-- Status Card -->
     <div class="status-card">
-      <div class="status-indicator">
+      <!-- Status Row -->
+      <div class="status-row">
         <div class="status-dot" id="statusDot"></div>
         <span class="status-text" id="statusText">Active</span>
       </div>
       <p class="status-description" id="statusDescription">
         Redirecting Wikipedia links to Grokipedia
       </p>
-    </div>
 
-    <!-- Toggle Section -->
-    <div class="toggle-section">
-      <label class="toggle-label">
-        <span class="toggle-text">Enable Redirects</span>
-        <div class="toggle-switch">
-          <input type="checkbox" id="enableToggle" checked>
-          <span class="toggle-slider"></span>
-        </div>
-      </label>
-    </div>
+      <div class="divider"></div>
 
-    <!-- Stats Section -->
-    <div class="stats-section">
-      <div class="stat-card">
-        <div class="stat-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-            <polyline points="15 3 21 3 21 9" />
-            <line x1="10" y1="14" x2="21" y2="3" />
-          </svg>
+      <!-- Controls Row -->
+      <div class="controls-row">
+        <div class="toggle-group">
+          <label class="toggle-switch">
+            <input type="checkbox" id="enableToggle" checked>
+            <span class="toggle-slider">
+              <span class="toggle-label-text">ON</span>
+            </span>
+          </label>
+          <span class="toggle-text">Enable Redirects</span>
         </div>
-        <div class="stat-content">
-          <span class="stat-value" id="redirectCount">0</span>
-          <span class="stat-label">Redirects</span>
+        <div class="stats-group">
+          <span class="stats-label">Redirects:</span>
+          <span class="stats-value" id="redirectCount">0</span>
         </div>
       </div>
     </div>
 
-
-
-    <!-- Support Section -->
-    <div class="support-section">
-      <a href="https://tiptopjar.com/wiki2grok" target="_blank" rel="noopener noreferrer" class="tip-btn" id="tipBtn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          <rect x="3" y="11" width="18" height="9" rx="2" />
-          <path d="M12 15v1" />
-        </svg>
-        Leave a Tip
-      </a>
-    </div>
+    <!-- Tip Button -->
+    <a href="https://tiptopjar.com/wiki2grok" target="_blank" rel="noopener noreferrer" class="tip-btn" id="tipBtn">
+      Leave a Tip
+    </a>
 
     <!-- Footer -->
     <footer class="footer">
       <button class="reset-btn" id="resetBtn" title="Reset redirect count">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M1 4v6h6" />
           <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
         </svg>
